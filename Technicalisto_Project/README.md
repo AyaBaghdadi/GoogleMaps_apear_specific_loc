@@ -1,14 +1,33 @@
 
 # Technicalisto
 
-## How to create horizontal CollectionView inside TableViewCell
+## How to Display Google map in Spesific Location using GMSMapView pod 'GoogleMaps' 
 
-1. Create your custom design as UITableView inside it add UITableViewCell inside it add your horizontal CollectionView.
+1. Install :
 
-2. Connect your Big tableview delegate to your viewController and send data with custom cell & reload collectionView after connect.
+    pod 'GoogleMaps'
 
-3. in your custom TableViewCell add delegate of collectionView and send data to custom collectionViewCell.
+2. In App delegate add & Define your google map key
 
+    import GoogleMaps
+   
+    let googleApiKey = "your_key"
+    
+3. In App delegate in method didFinishLaunchingWithOptions add : 
+
+    GMSServices.provideAPIKey(googleApiKey)
+
+4. In your viewController Inherit :
+
+    CLLocationManagerDelegate
+
+    GMSMapViewDelegate
+    
+5. In Storybored add to your map view class
+
+    GMSMapView
+    
+6. Check code in githup 
 
 ### Thanks
 
